@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
-import ItemList from "./ItemList";
-import Loader from "./Loader";
+import ItemList from "../ItemList/ItemList";
+import Loader from "../Loader/Loader";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {

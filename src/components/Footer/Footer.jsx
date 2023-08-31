@@ -1,4 +1,4 @@
-import dieteticaanyma from '../assets/img/dieteticaanyma.png'
+import dieteticaanyma from '../../assets/img/dieteticaanyma.png'
 import React from "react"
 
 const Footer = () => {

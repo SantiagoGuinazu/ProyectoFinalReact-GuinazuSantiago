@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Dropdown from 'react-bootstrap/Dropdown';
-import dieteticaanyma2 from '../assets/img/dieteticaanyma2.png'
+import dieteticaanyma2 from '../../assets/img/dieteticaanyma2.png'
 import { Link } from 'react-router-dom';
-import CartWidget from './CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (

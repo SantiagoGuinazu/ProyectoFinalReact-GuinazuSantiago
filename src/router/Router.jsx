@@ -4,10 +4,10 @@ import {
     Routes,
     Route,
 } from 'react-router-dom';
-import NavBar from '../components/NavBar';
-import ItemListContainer from '../components/ItemListContainer';
-import ItemDetailContainer from '../components/ItemDetailContainer';
-import Footer from '../components/Footer';
+import NavBar from '../components/NavBar/NavBar';
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer';
+import Footer from '../components/Footer/Footer';
 import { ShopComponentContext } from '../context/shopContext';
 import Hijo from '../components/hijo/Hijo';
 
