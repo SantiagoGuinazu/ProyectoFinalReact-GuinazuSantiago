@@ -19,7 +19,7 @@ const NavBar = () => {
                     <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                         <div>
                             <Dropdown>
-                                <Dropdown.Toggle variant='success' id='dropdown-basic'>
+                                <Dropdown.Toggle variant="primary" id='dropdown-basic'>
                                     Categorias
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
@@ -36,7 +36,7 @@ const NavBar = () => {
                     </ul>
                     <form className='d-flex' role='search'>
                         <input className='form-control me-2' type='search' placeholder='Search' aria-label='Search'></input>
-                        <button className='btn btn-outline-success' type='submit'>Search</button>
+                        <button className='btn btn-outline-primary' type='submit'>Search</button>
                     </form>
                 </div>
             </div>
