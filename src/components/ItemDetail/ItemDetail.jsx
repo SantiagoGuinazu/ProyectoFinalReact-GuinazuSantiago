@@ -2,7 +2,7 @@ import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function ItemDetail({ product }) {
+function ItemDetail({ product }) {
     const [contador, setContador] = useState(0);
 
     const sumar = () => {
@@ -38,3 +38,5 @@ export default function ItemDetail({ product }) {
         </Card>
     );
 }
+
+export default ItemDetail
