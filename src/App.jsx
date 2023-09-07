@@ -15,7 +15,7 @@ function App() {
     const dataFiltrada = data.docs.map((doc) => ( {...doc.data(), id: doc.id} ))
     console.log(dataFiltrada)
   }
-  //const productRef = doc(db, "products", "YqDpebZK65ddcSUn0MqH") //para un doc especifico
+  //const productRef = doc(db, "products", "WOigGicyZT9fzr3ralIc") //para un doc especifico
 
   //const getProduct = () => {
   //  getDoc(productRef).then((snapshot => {
