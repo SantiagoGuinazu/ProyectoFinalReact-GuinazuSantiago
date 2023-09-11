@@ -9,7 +9,9 @@ function ItemDetail({ product }) {
         setContador(contador + 1);
     };
     const restar = () => {
-        setContador(contador - 1);
+        if (contador == 0) {
+            setContador(0)
+        } else {setContador(contador - 1);}
     };
     const restart = () => {
         setContador(0);
