@@ -3,6 +3,8 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import dieteticaanyma2 from '../../assets/img/dieteticaanyma2.png'
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
+import carrito from '../../assets/img/carrito.png'
+
 
 const NavBar = () => {
     return (
@@ -39,6 +41,11 @@ const NavBar = () => {
                         <button className='btn btn-outline-primary' type='submit'>Search</button>
                     </form>
                 </div>
+                <div>
+                    <a href='#'>
+                        <img src={carrito} alt='carrito'/>
+                    </a>
+                </div>    
             </div>
             <CartWidget />
         </nav>
