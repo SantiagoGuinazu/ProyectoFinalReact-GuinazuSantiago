@@ -7,7 +7,7 @@ import {
 import NavBar from '../components/NavBar/NavBar';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer';
-import Checkout from '../components/Checkout/Checkout'
+import Checkout from '../components/Checkout/Checkout';
 import Footer from '../components/Footer/Footer';
 import CartProvider from '../context/CartContext';
 import Cart from "../components/Cart/cart";

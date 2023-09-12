@@ -33,7 +33,6 @@ const Checkout = () => {
                     console.log(res.id)
                     setOrderId(res.id)
                     clear()
-                    //Pongo Loader
                 })
                 .catch((error) => console.log(error))
         }

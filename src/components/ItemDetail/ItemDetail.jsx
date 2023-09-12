@@ -10,7 +10,6 @@ const ItemDetail = ({ product }) => {
     const {addItem} = useContext(CartContext)
 
     const onAdd = (cantidad) => {
-        console.log(`Compraste ${cantidad} productos`)
         setQuantityAdded(true)
         addItem(product, cantidad)
     }

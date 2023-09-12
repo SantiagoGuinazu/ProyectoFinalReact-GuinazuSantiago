@@ -25,8 +25,6 @@ const ItemListContainer = () => {
             .finally(() => setLoading(false))
     }, [id]);
 
-    console.log(products)
-
     return (
         <Container>
             <Row style={{ alignItems: 'stretch', justifyContent: 'space-evenly' }}>

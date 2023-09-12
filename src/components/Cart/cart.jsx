@@ -14,7 +14,7 @@ const Cart = () => {
                 <h4 className="d-flex justify-content-around align-items-center">Total a pagar: ${total()}</h4>
                 <div>
                     <button className="btn btn-danger" onClick={clear}>Vaciar Carrito</button>
-                    <Link className="btn btn-dark">Terminar de Comprar</Link>
+                    <Button as={Link} className="btn btn-dark" to='/checkout'>Terminar de Comprar</Button>
                 </div>
             </div>
             :   <div>
