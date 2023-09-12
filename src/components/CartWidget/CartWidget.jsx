@@ -1,12 +1,14 @@
-import {BsCart4} from "react-icons/bs"
+import { BsCart4 } from "react-icons/bs"
 import { Badge } from 'react-bootstrap';
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 const CartWidget = () => {
-    
+    const {cartQuantity} = useContext(CartContext)
     return (
         <div className='d-flex justify-content-around align-items-center'>
             <BsCart4 fontSize={'1.5rem'}/>
-            <Badge bg="danger">5</Badge>
+            <Badge bg="danger">{cartQuantity()}</Badge>
         </div>    
     );
 }

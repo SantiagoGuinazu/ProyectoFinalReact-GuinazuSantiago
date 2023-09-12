@@ -3,8 +3,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import dieteticaanyma2 from '../../assets/img/dieteticaanyma2.png'
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
-import carrito from '../../assets/img/carrito.png'
-
+import { NavLink } from 'react-bootstrap';
 
 const NavBar = () => {
     return (
@@ -37,13 +36,8 @@ const NavBar = () => {
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <a href='#'>
-                        <img src={carrito} alt='carrito'/>
-                    </a>
-                </div>    
             </div>
-            <CartWidget />
+            <NavLink to='/cart'> <CartWidget /> </NavLink> 
         </nav>
     );
 };

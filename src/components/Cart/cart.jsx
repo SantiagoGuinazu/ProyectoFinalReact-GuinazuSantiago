@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 
 const Cart = () => {
-    const{cart, clear, total}= useContext(CartContext)
+    const{ cart, clear, total}= useContext(CartContext)
     return(
         <div>
             {cart.length
