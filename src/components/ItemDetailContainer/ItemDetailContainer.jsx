@@ -2,8 +2,22 @@ import { React, useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Loader from "../Loader/Loader";
 import { useParams } from "react-router-dom";
+//import { db } from "./firebase/client";
+//import {getDocs, collection, query, where, limit, getDoc, doc } from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
+
+      //const productRef = doc(db, "products", "WOigGicyZT9fzr3ralIc") //para un doc especifico
+
+  //const getProduct = () => {
+  //  getDoc(productRef).then((snapshot => {
+  //    if(snapshot.exists()){
+  //      console.log( {id: snapshot.id, ...snapshot.data()} )
+  //    }
+  //  }))
+  //}
+
+
     const [product, setProducts] = useState({});
     const [loading, setLoading] = useState(false);
 
