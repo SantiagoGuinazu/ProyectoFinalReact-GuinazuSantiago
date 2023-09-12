@@ -18,7 +18,7 @@ const Checkout = () => {
 
     const finalizarCompra = (e) => {
         e.preventDefault()
-        if (!user.name && !user.phone) {
+        if(!user.name && !user.phone) {
             alert("Completar los campos vacios")
         } else {
             let order = {
