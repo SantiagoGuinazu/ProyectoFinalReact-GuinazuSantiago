@@ -3,46 +3,29 @@ import { Container, Row } from "react-bootstrap";
 import ItemList from "../ItemList/ItemList";
 import Loader from "../Loader/Loader";
 import { useParams } from "react-router-dom";
-//import { db } from "./firebase/client";
-//import {getDocs, collection, query, where, limit, getDoc, doc } from 'firebase/firestore'
+import {collection, getDocs}from 'firebase/firestore'
+import {db} from '../../firebase/client'
+
 
 const ItemListContainer = () => {
-
- //   const [products, setProducts] = useState([])
- //   
- //   const productsRef = collection(db, "products")
- //   const getProducts = async () => {
- //       const data = await getDocs(productsRef)
- //       const dataFiltrada = data.docs.map((doc) => ( {...doc.data(), id: doc.id} ))
- //       console.log(dataFiltrada)
- //       setProducts(dataFiltrada)
- //   }
-//
- //   useEffect(() => {
- //       getProducts()
- //   },[]);
-
 
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
 
     const { id } = useParams();
-
     useEffect(() =>{
         setLoading(true);
-
-        const URL = id ? `https://fakestoreapi.com/products/category/${id}` : 'https://fakestoreapi.com/products/'
-        const getCollection = fetch(URL);
-
-        getCollection
-        .then((res) => res.json())
+        const productsRef = collection(db, "products")
+        getDocs(productsRef)
         .then((res) => {
-            setProducts(res)
-            setLoading(true)
+            const list = res.docs.map((item)=>({id:item.id, ...item.data()})) 
+            setProducts(list)
         })
         .catch((err) => console.log(err))
         .finally(() => setLoading(false))
     }, [id]);
+
+console.log(products)
 
     return(
         <Container>
