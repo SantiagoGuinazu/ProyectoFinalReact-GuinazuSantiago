@@ -1,11 +1,15 @@
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import ItemCount from "../ItemCount/ItemCount";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import ItemCount from "../ItemCount/ItemCount"
 
 const ItemDetail = ({ product }) => {
 
+    const [quantityAdded, setQuantityAdded]= useState(false)
+
     const onAdd = (cantidad) => {
         console.log(`Compraste ${cantidad} productos`)
+        setQuantityAdded(true)
     }
 
     return (
@@ -21,10 +25,11 @@ const ItemDetail = ({ product }) => {
                 <Card.Title>${product.price}</Card.Title>
                 <Card.Text>{product.product}</Card.Text>
                 <Card.Text>{product.description}</Card.Text>
-                <ItemCount initial={1} stock={product.stock} onAdd={onAdd} />
+                { !quantityAdded ? <ItemCount initial={1} stock={product.stock} onAdd={onAdd} />
+                : <Link to='/Cart' className="btn btn-dark">Ir al Carrito</Link>}
             </Card.Body>
         </Card>
     );
 }
 
-export default ItemDetail
+export default ItemDetail;
