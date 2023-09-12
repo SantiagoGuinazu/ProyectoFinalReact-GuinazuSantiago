@@ -1,22 +1,13 @@
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import ItemCount from "../ItemCount/ItemCount"
 
-function ItemDetail({ product }) {
-    const [contador, setContador] = useState(0);
+const ItemDetail = ({ product }) => {
 
-    const sumar = () => {
-        setContador(contador + 1);
-    };
-    const restar = () => {
-        if (contador == 0) {
-            setContador(0)
-        } else {setContador(contador - 1);}
-    };
-    const restart = () => {
-        setContador(0);
-    };
-    
+    const onAdd = (cantidad) => {
+        console.log(`Compraste ${cantidad} productos`)
+    }
+
     return (
         <Card style={{ width: "18rem", margin: "1rem" }}>
             <Card.Img
@@ -30,12 +21,7 @@ function ItemDetail({ product }) {
                 <Card.Title>${product.price}</Card.Title>
                 <Card.Text>{product.product}</Card.Text>
                 <Card.Text>{product.description}</Card.Text>
-                <Button className='btn' variant="outline-warning" onClick={restar} >-</Button>
-                <Button className='btn' variant="outline-warning" onClick={sumar} >+</Button>
-                <Button className='btn' variant="danger" onClick={restart}>Restart</Button>
-                <Button as={Link} className='btn' variant="success" to="/" >Comprar</Button>
-                <p>Contador: {contador}</p>
-                <Button as={Link} variant="primary" to="/">Home</Button>
+                <ItemCount initial={1} stock={product.stock} onAdd={onAdd} />
             </Card.Body>
         </Card>
     );
