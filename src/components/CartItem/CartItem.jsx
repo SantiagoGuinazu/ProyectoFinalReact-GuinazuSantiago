@@ -1,8 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
+import { CartContext } from "../../context/CartContext";
+const CartItem = ({item}) => {
 
-const CartItem = () => {
+    const {deleteItem} = useContext(CartContext)
+
     return(
-        <div>CartItem</div>
+        <div className="d-flex justify-content-around align-items-center">
+            <img src={item.image} alt={item.name} width={'150rem'}/>
+            <p>{item.name}</p>
+            <p>${item.price}</p>
+            <p>Cantidad: {item.quantity}</p>
+            <p>Subtotal: ${item.quantity * item.price}</p>
+            <button className="btn btn-danger" onClick={(()=>deleteItem(item.id))}>X</button>
+        </div>
     )
 }
 
