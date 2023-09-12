@@ -29,7 +29,7 @@ const ItemDetail = ({ product }) => {
                 <Card.Text>{product.product}</Card.Text>
                 <Card.Text>{product.description}</Card.Text>
                 { !quantityAdded ? <ItemCount initial={1} stock={product.stock} onAdd={onAdd} />
-                : <Link to='/Cart' className="btn btn-dark">Ir al Carrito</Link>}
+                : <Link to='/cart' className="btn btn-dark">Ir al Carrito</Link>}
             </Card.Body>
         </Card>
     );
