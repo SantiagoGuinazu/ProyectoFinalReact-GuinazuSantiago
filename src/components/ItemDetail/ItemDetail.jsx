@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ product }) => {
