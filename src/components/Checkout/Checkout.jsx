@@ -1,7 +1,7 @@
-import { collection, serverTimestamp } from "firebase/firestore";
+import { collection, serverTimestamp, addDoc } from "firebase/firestore";
 import React, { useState, useContext } from "react";
 import { db } from "../../firebase/client";
-import CartContext from "../../context/CartContext";
+import {CartContext } from "../../context/CartContext";
 
 const Checkout = () => {
     const [user, setUser] = useState({})
@@ -43,7 +43,7 @@ const Checkout = () => {
             {orderId !== ''
                 ? <div>
                     <h2>Felicitaciones, su orden fue generada</h2>
-                    <h5>Su id es: ${orderId}</h5>
+                    <h5>Su id es: {orderId}</h5>
                 </div>
                 : <div>
                     <h2>Terminar Compra</h2>
