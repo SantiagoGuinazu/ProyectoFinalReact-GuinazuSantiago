@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
-import ItemList from "../ItemList/ItemList";
-import Loader from "../Loader/Loader";
-import { useParams } from "react-router-dom";
-import { collection, getDocs, query, where } from 'firebase/firestore'
+import { useEffect, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
+import ItemList from '../ItemList/ItemList';
+import Loader from '../Loader/Loader';
+import { useParams } from 'react-router-dom';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../../firebase/client'
 
 
@@ -15,7 +15,7 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         setLoading(true);
-        const productsRef = id ? query(collection(db, "products"), where('category', '==', id)) : collection(db, "products")
+        const productsRef = id ? query(collection(db, 'products'), where('category', '==', id)) : collection(db, 'products')
         getDocs(productsRef)
             .then((res) => {
                 const list = res.docs.map((item) => ({ id: item.id, ...item.data() }))

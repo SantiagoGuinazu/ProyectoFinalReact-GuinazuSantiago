@@ -1,8 +1,8 @@
-import { Card } from "react-bootstrap";
-import ItemCount from "../ItemCount/ItemCount";
-import { useState, useContext } from "react";
-import { Link } from "react-router-dom";
-import { CartContext } from "../../context/CartContext";
+import { Card } from 'react-bootstrap';
+import ItemCount from '../ItemCount/ItemCount';
+import { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ product }) => {
 
@@ -15,12 +15,12 @@ const ItemDetail = ({ product }) => {
     }
 
     return (
-        <Card style={{ width: "18rem", margin: "1rem" }}>
+        <Card style={{ width: '18rem', margin: '1rem' }}>
             <Card.Img
-                variant="top"
+                variant='top'
                 src={product.image}
-                width="100px"
-                height="200px"
+                width='100px'
+                height='200px'
             />
             <Card.Body>
                 <Card.Title>{product.title}</Card.Title>
@@ -29,7 +29,7 @@ const ItemDetail = ({ product }) => {
                 <Card.Text>{product.description}</Card.Text>
                 <Card.Text>Stock: {product.stock}</Card.Text>
                 { !quantityAdded ? <ItemCount initial={1} stock={product.stock} onAdd={onAdd} />
-                : <Link to='/cart' className="btn btn-dark">Ir al Carrito</Link>}
+                : <Link to='/cart' className='btn btn-dark'>Ir al Carrito</Link>}
             </Card.Body>
         </Card>
     );

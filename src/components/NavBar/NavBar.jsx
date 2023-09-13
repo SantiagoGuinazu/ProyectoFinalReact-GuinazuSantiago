@@ -1,6 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from 'react-bootstrap/Dropdown';
-import dieteticaanyma2 from '../../assets/img/dieteticaanyma2.png'
+import dieteticaanyma2 from '../../assets/img/dieteticaanyma2.png';
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 import { NavLink } from 'react-bootstrap';
@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 
 const NavBar = () => {
     return (
-        <nav className='navbar navbar-expand-lg bg-body-tertiary' data-bs-theme="dark">
+        <nav className='navbar navbar-expand-lg bg-body-tertiary' data-bs-theme='dark'>
             <div className='logoimagen'>
                 <img src={dieteticaanyma2} alt='logo' />
             </div>
@@ -21,10 +21,10 @@ const NavBar = () => {
                     <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                         <div>
                             <Dropdown>
-                                <Button as={Link} to='/' variant="primary" id='dropdown-basic'>
+                                <Button as={Link} to='/' variant='primary' id='dropdown-basic'>
                                     Inicio
                                 </Button>
-                                <Dropdown.Toggle variant="primary" id='dropdown-basic'>
+                                <Dropdown.Toggle variant='primary' id='dropdown-basic'>
                                     Categorias
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>

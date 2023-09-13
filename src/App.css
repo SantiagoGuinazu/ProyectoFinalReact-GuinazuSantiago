@@ -1,20 +1,9 @@
-.CartWidget {
-    display: flex;
-    margin-right: 40px;
-}
-
 .logoimagen {
     margin-left: 20px;
 }
 
 #root {
     background-color: #F8F0E5;
-}
-
-.listaProductos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .footer {
@@ -38,5 +27,5 @@
 }
 
 .btn-primary {
-    margin-left: 5px;
+    margin-left: 10px;
 }

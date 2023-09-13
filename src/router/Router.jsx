@@ -10,7 +10,7 @@ import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailCon
 import Checkout from '../components/Checkout/Checkout';
 import Footer from '../components/Footer/Footer';
 import CartProvider from '../context/CartContext';
-import Cart from "../components/Cart/cart";
+import Cart from '../components/Cart/cart';
 
 export default function Router() {
     return (
