@@ -43,7 +43,7 @@ const Checkout = () => {
             {orderId !== ''
                 ? <div>
                     <h2>Felicitaciones, su orden fue generada</h2>
-                    <h5>Su id es: {orderId}</h5>
+                    <h5>Su id de compra es: {orderId}</h5>
                 </div>
                 : <div>
                     <h2>Terminar Compra</h2>

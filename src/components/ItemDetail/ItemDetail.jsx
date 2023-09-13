@@ -27,6 +27,7 @@ const ItemDetail = ({ product }) => {
                 <Card.Title>${product.price}</Card.Title>
                 <Card.Text>{product.product}</Card.Text>
                 <Card.Text>{product.description}</Card.Text>
+                <Card.Text>Stock: {product.stock}</Card.Text>
                 { !quantityAdded ? <ItemCount initial={1} stock={product.stock} onAdd={onAdd} />
                 : <Link to='/cart' className="btn btn-dark">Ir al Carrito</Link>}
             </Card.Body>
